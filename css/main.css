@@ -21,10 +21,10 @@ a:hover, a:focus {
 
 body {
 	background-attachment: fixed;
-	background-image: url("../img/background.jpg");
+	background-image: none;
 	background-size: cover;
 	font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -39,6 +39,7 @@ footer {
 }
 
 #generalinfo {
+	overflow: hidden;
 	padding: 1em;
 }
 
@@ -75,13 +76,17 @@ header {
 
 main {
 	background-image: url("../img/ricepaper_v3.png");
-	margin: 20px;
-	margin-left: 30%;
 	opacity: 0.9;
+}
+
+main.container-fluid {
+	margin: 0;
+	padding: 0;
 }
 
 #menu {
 	background-color: rgba(207, 205, 140, 0.5);
+	overflow: hidden;
 	padding: 1em;
 }
 
@@ -98,6 +103,53 @@ main {
 
 .motto {
 	color: #EEEEEE;
+	display: none;
 	font-size: 120%;
 	margin: 0;
+}
+
+nav a {
+	color: #55E;
+}
+
+nav a:focus, nav a:hover {
+	color: #00E;
+}
+
+nav li {
+	display: inline-block;
+	list-style-type: none;
+	margin-right: 1em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* more than 992px (large screens) */
+@media (min-width: 992px) {
+	body {
+		background-image: url("../img/background.jpg");
+		font-size: 18px;
+	}
+	
+	header {
+		position: relative;
+	}
+	
+	main.container-fluid {
+		margin: 20px;
+		margin-left: 30%;
+	}
+	
+	.motto {
+		display: initial;
+	}
+	
+	nav {
+		right: 10px;
+		position: absolute;
+		top: 10px;
+	}
 }
